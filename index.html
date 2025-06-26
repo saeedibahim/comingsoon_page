@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coming Soon | Saeed Ibrahim</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77, #778da9);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .container {
+        max-width: 900px;
+        width: 700px;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 1.5s ease-in-out;
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    #fancyText {
+      font-size: 1.3rem;
+      color: #ccc;
+      transition: opacity 0.5s ease-in-out;
+        margin-bottom: 20px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5rem;
+      transition: transform 0.3s;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    h2 {
+  font-size: 2rem;
+  color: #f0c330;
+  margin-bottom: 0.5rem;
+}
+
+    .socials a:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px){
+      h1 {
+        font-size: 1.5rem;
+      }
+      .container {
+        width: 500px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 300px;
+        height: 300px;
+      }
+
+      .socials a {
+        font-size: 1.3rem;
+
+      }
+
+      p {
+        margin: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Saeed Ibrahim</h2> <!-- Name at the top -->
+    <h1>Coming Soon</h1>
+    <p id="fancyText">Loading your experience...</p>
+    <div class="socials">
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+      <a href="mailto:saeedmajedibrahim@gmail.com">Email</a>
+    </div>
+  </div>
+
+  <script>
+    const phrases = [
+      "Crafting a beautiful portfolio...",
+      "Sharpening the code...",
+      "Almost ready to launch!"
+    ];
+    let i = 0;
+    const el = document.getElementById("fancyText");
+
+    setInterval(() => {
+      el.style.opacity = 0;
+      setTimeout(() => {
+        el.textContent = phrases[i % phrases.length];
+        el.style.opacity = 1;
+        i++;
+      }, 500);
+    }, 3000);
+  </script>
+</body>
+</html>
